@@ -18,10 +18,9 @@ export const App = () => {
     API.fetchArticles(paras)
       .then(({ data }) => {
         setArticles((prevState) => [...prevState, ...data]);
-        console.log("pfgbn1");
       })
       .catch((error) => {
-        console.log(error.message);
+        alert(error.message);
       });
   }, [paras]);
 
